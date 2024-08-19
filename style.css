@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body,
@@ -22,10 +25,12 @@ html {
 .login-form {
   position: relative;
   margin: 0 auto;
-  width: 30%;
+  width: 85%;
   color: #fff;
   padding: 20px;
   z-index: 1;
+  border: 2px solid #837979;
+  border-radius: 10px;
 }
 
 .login-form::before {
@@ -43,4 +48,93 @@ html {
 
 .login-form > * {
   position: relative;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  margin-bottom: 20px;
+  border: 2px solid #837979;
+  border-radius: 10px;
+  padding: 10px 5px;
+  background-color: transparent;
+  color: #fff;
+  font-size: larger;
+  width: 100%;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-group {
+  position: relative;
+  /* margin-bottom: 30px; */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-group input[type="password"] {
+  padding-right: 30px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-opt {
+  text-align: center;
+}
+
+.remember {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  font-size: larger;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #837979;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .login-form {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .login-form {
+    margin: 0 auto;
+    width: 30%;
+  }
 }
